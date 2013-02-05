@@ -1,0 +1,196 @@
+\documentclass[10pt, twocolumn]{article}
+\usepackage[landscape, vmargin=2cm, hmargin=2.5cm]{geometry}
+\usepackage{amsmath}
+
+\usepackage{setspace}
+\title{MA1104 Summary}
+
+\setlength{\columnsep}{20pt}
+
+\begin{document}
+\begin{center}
+\part*{MA1104 Summary}
+\end{center}
+\tableofcontents
+\newpage
+
+\setcounter{section}{11}
+\onehalfspacing
+\section{Vectors and The Geometry of Space}
+\subsection{The Cartesian Coordinates}
+{\bf Formula}
+\begin{itemize}
+\item Distance from $P_1(x_1,y_1,z_1)$ to $P_2(x_2,y_2,z_2)$:
+\begin{center}
+$|P_1P_2| = \sqrt{(x_1-x_2)^2+(y_1-y_2)^2+(z_1-z_2)^2}$
+\end{center}
+\item Equation of Sphere ($Radius = a$, $Center = (x_0,y_0,z_0)$):
+\begin{center}
+$(x-x_0)^2+(y-y_0)^2+(z-z_0)^2 = a^2$
+\end{center}
+\end{itemize}
+{\bf Problems}
+\newline
+Find the center and radius of the sphere:
+\begin{center}
+$x^2+y^2+z^2+3x-4z+1=0$
+\end{center}
+Complete the square for $x,y,z$ terms respectively.
+
+\subsection{Vectors}
+{\bf Definitions}
+\begin{enumerate}
+\item[1.]{End point: $(v_1,v_2,v_3)$}
+\item[2.]{Position vector: $<v_1,v_2,v_3>$}
+\item[3.]{If $\mathbf{v}$ is a non-zero vector, then $\frac{\mathbf{v}}{|\mathbf{v}|}$ is a vector in the direction of $\mathbf{v}$.}
+\end{enumerate}
+
+\subsection{The Dot Product}
+{\bf Definitions}
+\begin{enumerate}
+\item[1.]{Dot Product}
+\begin{center}
+$\mathbf{u} \cdot \mathbf{v} = u_1v_1+u_2v_2+u_3v_3$ \\
+$\mathbf{u} \cdot \mathbf{v} = |\mathbf{u}||\mathbf{v}|\cos\theta$
+\end{center}
+\item[2.]{Two vectors are \underline{orthogonal} if their dot product is 0.}
+\end{enumerate}
+{\bf Formula}
+\begin{itemize}
+\item Vector projection of $\mathbf{u}$ onto $\mathbf{v}$:
+\begin{center}
+proj$_vu = (\frac{\mathbf{u} \cdot \mathbf{v}}{|\mathbf{v}|^2})\mathbf{v}$
+\end{center}
+\item Scalar component of $\mathbf{u}$ in the direction of $\mathbf{v}$:
+\begin{center}
+$|\mathbf{u}|\cos\theta = \frac{\mathbf{u} \cdot \mathbf{v}}{|\mathbf{v}|} = \mathbf{u} \cdot \frac{\mathbf{v}}{|\mathbf{v}|}$
+\end{center}
+\end{itemize}
+
+\subsubsection{Determinants}
+{\bf Definitions}
+\begin{enumerate}
+\item[1.]{In two dimensions, determinants measure \underline{area of parallelogram} created by two vectors.}
+\item[2.]{In three dimension, determinants measure \underline{volume of parallelepiped} created by three vectors.}
+\item[3.]{If volume of parallelepiped is $0$, the three vectors are \underline{coplanar}.}
+\end{enumerate}
+
+\subsection{The Cross Product}
+{\bf Definitions}
+\begin{enumerate}
+\item[1.]{Non-zero vectors $\mathbf{u}$ and $\mathbf{v}$ are \underline{parallel} if and only if $\mathbf{u} \times \mathbf{v} = 0$.}
+\item[2.]{Cross products are \underline{neither} commutative nor associative.}
+\end{enumerate}
+{\bf Formula}
+\begin{itemize}
+\item Cross Product $<b_1,b_2,b_3> \times <c_1,c_2,c_3>$:
+\begin{center}
+$=\begin{array}{|ccc|}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+b_1 & b_2 & b_3 \\
+c_1 & c_2 & c_3
+\end{array}$ \hspace{20pt}
+or \hspace{20pt}
+$=(|b||c|\sin\theta)n$
+\end{center}
+where $\mathbf{n}$ is the normal vector to $\mathbf{u}$ and $\mathbf{v}$ in the direction of the right hand thumb when sweeping fingers from $\mathbf{u}$ to $\mathbf{v}$.
+\item Area of Triangle {\bf PQR}
+\begin{center}
+$=\frac{1}{2}|\vec{\textbf{PQ}} \times \vec{\textbf{QR}}$
+\end{center}
+\item $|\mathbf{u}\times\mathbf{v}| = |\mathbf{u}\mathbf{v}||\sin\theta||\mathbf{n}| = |\mathbf{u}||\mathbf{v}|\sin\theta$
+\end{itemize}
+{\bf Properties of the Cross Product}
+\begin{enumerate}
+\item[1.]{$(r\mathbf{u})\times(s\mathbf{v}) = (rs)(\mathbf{u}\times\mathbf{v})$}
+\item[2.]{$\mathbf{u}\times(\mathbf{v}+\mathbf{w} = \mathbf{u}\times\mathbf{v} + \mathbf{u}\times\mathbf{w}$}
+\item[3.]{$(\mathbf{v}+\mathbf{w})\times\mathbf{u} = \mathbf{v}\times\mathbf{u} + \mathbf{w}\times\mathbf{u}$}
+\item[4.]{$\mathbf{v}\times\mathbf{u} = -(\mathbf{u}\times\mathbf{v})$}
+\item[5.]{$\mathbf{0}\times\mathbf{u} = \mathbf{0}$}
+\end{enumerate}
+
+\subsection{Lines and Planes in Space}
+{\bf Definitions}
+\begin{enumerate}
+\item[1.]{Vector equation for the line $L$ through $P_0(x_0,y_0,z_0)$ parallel to $\mathbf{v}$ is}
+\begin{center}
+$\mathbf{r}(t) = \mathbf{r}_0 + t\mathbf{v}$, \hspace{25pt} $-\infty < t < \infty$
+\end{center}
+where $\mathbf{r}$ is the position vector of a point $P(x,y,z)$ and $\mathbf{r}_0$ is the position vector of $P_0(x_0,y_0,z_0)$.
+\end{enumerate}
+{\bf Problems}
+\begin{enumerate}
+\item[1.]{Parameterizing a Line Segment}
+\newline
+Add range restriction to $t$ such that it is bounded by the values of $t$ and the given points.
+\end{enumerate}
+{\bf Formula}
+\begin{enumerate}
+\item[1.]{Distance from Point $S$ to a line through $P$ parallel to $\mathbf{v}$}
+\begin{center}
+$d = \frac{|\vec{PS} \times \mathbf{v}|}{|\mathbf{v}|}$
+\end{center}
+\end{enumerate}
+\subsubsection{Planes}
+{\bf Definitions}
+\begin{enumerate}
+\item[1.]{Equation for a Plane}
+\newline
+The plane through $P_0(x_0,y_0,z_0)$ normal to $\mathbf{n} = A\mathbf{i}+B\mathbf{j}+C\mathbf{k}$ has equations:
+\newline
+$\mathbf{n} \cdot \vec{P_0P} = 0$
+\newline
+$Ax + By + Cz = D$
+\newline
+where $D = Ax_0 + By_0 + Cz_0$
+\end{enumerate}
+{\bf Formula}
+\begin{enumerate}
+\item[1.]{Distance between parallel planes}
+\begin{center}
+$ax+by+cz = d_1$ \hspace{20pt} $ax+by+cz = d_2$
+\end{center}
+Find a point $(x_0,y_0,z_0)$ on plane 1.
+\begin{center}
+Distance = $\frac{|ax_0+by_0+cz_0-d_2|}{\sqrt{a^2+b^2+c^2}}$
+\end{center}
+\item[2.]{Distance from point to a plane}
+\newline
+Let $P$ be a point on a plane with normal $\mathbf{n}$. \\
+Distance from any point $S$ to the plane is
+\begin{center}
+$d = |\vec{PS} \cdot \frac{\mathbf{n}}{|\mathbf{n}}|$
+\end{center}
+\end{enumerate}
+
+\subsection{Cylindrical and Spherical Coordinates}
+{\bf Definitions}
+\begin{enumerate}
+\item[1.]{Cylindrical Coordinates}
+\newline
+$(r,\theta,z)$
+\newline
+where $r$ is the length on $x-y$ plane and $\theta$ is the angle from $x$-axis.
+\item[2.]{Spherical Coordinates}
+\newline
+$(\rho,\phi,\theta)$
+\newline
+where $\rho$ is the magnitude of vector, $\phi$ is the angle from $z$-axis and $\theta$ is the angle from $x$-axis on the $x-y$ plane.
+\end{enumerate}
+{\bf Formula}
+\begin{enumerate}
+\item[1.]{Equations relating $(x,y,z)$ to $(r,\theta,z)$}
+\begin{center}
+$x = r\cos\theta$ \hspace{20pt} $y = r\sin\theta$ \hspace{20pt} $z = z$ \\
+$r^2 = x^2 + y^2$ \hspace{20pt} $\tan\theta = \frac{y}{x}$
+\end{center}
+\item[2.]{Equations relating $(x,y,z)$ and $(r,\theta,z)$ to $(\rho,\phi\theta)$}
+\begin{center}
+$r = \rho\sin\phi$ \hspace{20pt} $x = r\cos\theta = \rho\sin\phi\cos\theta$ \\
+$z = \rho\cos\phi$ \hspace{20pt} $y = r\sin\theta = \rho\sin\phi\sin\theta$ \\
+$\rho = \sqrt{x^2+y^2+z^2} = \sqrt{r^2+z^2}$
+\end{center}
+\end{enumerate}
+
+
+\end{document}
